@@ -1,5 +1,9 @@
-const create = async () => {
-    // Write your code here 
-};
+import * as fs from 'fs'
 
-await create();
+const create = async () => {
+	fs.writeFile('src/fs/files/text.txt', 'I am fresh and young', err => {
+		if (err) console.log('FS operation failed')
+	})
+}
+
+await create()
