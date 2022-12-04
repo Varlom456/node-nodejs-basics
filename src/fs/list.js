@@ -1,5 +1,12 @@
+import * as fs from 'fs'
+
+
 const list = async () => {
-    // Write your code here 
+    fs.readdir('src/fs/files', (err, data) => {
+        data.forEach(file => {
+            console.log(file);
+        });
+    });
 };
 
 await list();
